@@ -13,6 +13,7 @@ const SpecialityMenu = () => {
         Simply browse through our extensive list of trusted doctors, schedule
         your appointment hassle-free.
       </p>
+      
       <div className="flex sm:justify-center gap-4 pt-5 w-full overflow-scroll">
         {specialityData.map((item, index) => (
           <Link
