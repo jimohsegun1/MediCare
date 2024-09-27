@@ -6,7 +6,17 @@ const Footer = () => {
     <div className="md:mx-10">
       <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
         <div>
-          <img className="mb-5 w-40" src={assets.logo} alt="" />
+          {/* <img className="mb-5 w-40" src={assets.logo} alt="" /> */}
+          <div className="flex items-center space-x-1 cursor-pointer" onClick={() => navigate("/")}>
+            <img
+              className="w-[50px] h-[50px] "
+              src={assets.logo}
+              alt=""
+              width={10}
+              height={10}
+            />
+            <span className="font-bold text-primary text-xl">MediCare</span>
+          </div>
           <p className="w-full md:w-2/3 text-gray-600 leading-6">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -36,7 +46,7 @@ const Footer = () => {
 
       <div>
         <hr />
-        <p className="py-5 text-sm text-center">Copyright © 2024 Prescripto - All Right Reserved.</p>
+        <p className="py-5 text-sm text-center">Copyright © 2024 MediCare - All Right Reserved.</p>
       </div>
     </div>
   );
