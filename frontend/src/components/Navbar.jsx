@@ -1,16 +1,27 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { assets } from "../assets/assets";
 import { NavLink, useNavigate } from "react-router-dom";
+import { AppContext } from "../context/AppContext";
 
 const Navbar = () => {
   const navigate = useNavigate();
 
+  const { token, setToken } = useContext(AppContext);
+
   const [showMenu, setShowMenu] = useState(false);
-  const [token, setToken] = useState(true);
+  // const [token, setToken] = useState(true); // DUMMY TOKEN
+
+  const logout = () => {
+    setToken(false);
+    localStorage.removeItem("token");
+  };
 
   return (
     <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400  h-[12vh] sticky top-0 z-[1] bg-white">
-      <div className="flex items-center space-x-1 cursor-pointer ml-2" onClick={() => navigate("/")}>
+      <div
+        className="flex items-center space-x-1 cursor-pointer ml-2"
+        onClick={() => navigate("/")}
+      >
         <img
           className="w-[50px] h-[50px] "
           src={assets.logo}
@@ -62,10 +73,7 @@ const Navbar = () => {
                 >
                   My Appointments
                 </p>
-                <p
-                  onClick={() => setToken(false)}
-                  className="hover:text-black cursor-pointer"
-                >
+                <p onClick={logout} className="hover:text-black cursor-pointer">
                   Logout
                 </p>
               </div>
@@ -90,12 +98,16 @@ const Navbar = () => {
 
         {/* mobile menu */}
         <div
-          className={`${showMenu ? "fixed w-full" : "h-0 w-0"
-            } md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}
+          className={`${
+            showMenu ? "fixed w-full" : "h-0 w-0"
+          } md:hidden right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}
         >
           <div className="flex items-center justify-between px-5 py-6">
             {/* <img className="w-36" src={assets.logo} alt="" /> */}
-            <div className="flex items-center space-x-1 cursor-pointer ml-2" onClick={() => navigate("/")}>
+            <div
+              className="flex items-center space-x-1 cursor-pointer ml-2"
+              onClick={() => navigate("/")}
+            >
               <img
                 className="w-[50px] h-[50px] "
                 src={assets.logo}
