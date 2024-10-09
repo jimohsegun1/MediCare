@@ -101,7 +101,7 @@ const loginAdmin = async (req, res) => {
   }
 };
 
-// API to get all doctors list for admin panel
+// API to get all the doctors list for admin panel
 const allDoctors = async (req, res) => {
   try {
     const doctors = await doctorModel.find({}).select("-password");
