@@ -151,7 +151,7 @@ const bookAppointment = async (req, res) => {
   }
 };
 
-// API to get user appointments for frontend my-appointments page
+// API to get user appointments for frontend the my-appointments page
 const listAppointment = async (req, res) => {
   try {
     const { userId } = req.body;
