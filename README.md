@@ -37,7 +37,8 @@ As part of my graduation at **SAIL Innovation Lab** for the completion of the **
 ## Technologies Used  
 - **Frontend**  
   - React.js for building dynamic and responsive user interfaces.  
-  - Tailwind CSS for rapid styling and responsive design.  
+  - Tailwind CSS for rapid styling and responsive design.
+  - Context Api for state management  
 
 - **Backend**  
   - Node.js with Express.js for API and server-side logic.  
