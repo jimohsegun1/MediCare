@@ -18,19 +18,23 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400  h-[12vh] sticky top-0 z-[1] bg-white">
-      <div
-        className="flex items-center space-x-1 cursor-pointer ml-2"
-        onClick={() => navigate("/")}
-      >
-        <img
-          className="w-[50px] h-[50px] "
-          src={assets.logo}
-          alt=""
-          width={10}
-          height={10}
-        />
-        <span className="font-bold text-primary text-xl">MediCare</span>
+      <div className="flex items-center gap-4 md:gap-10 ml-5">
+        <div
+          className="flex items-center space-x-1 cursor-pointer ml-2"
+          onClick={() => navigate("/")}
+        >
+          <img
+            className="w-[50px] h-[50px] "
+            src={assets.logo}
+            alt=""
+            width={10}
+            height={10}
+          />
+          <span className="font-bold text-primary text-xl">MediCare</span>
+        </div>
+        <a href="https://medi-care-admin-kohl.vercel.app/" target="_blank" className="text-xs text-gray-400 hover:text-gray-600">Go to Admin Panel</a>
       </div>
+
       <ul className="hidden md:flex items-start gap-5 font-medium">
         <NavLink to="/">
           <li className="py-1 text-lg">HOME</li>
