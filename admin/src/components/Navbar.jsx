@@ -36,8 +36,8 @@ const Navbar = () => {
           <span className="font-bold text-primary text-xl">MediCare</span>
         </div>
         
-        <p className="border px-2.5 py-0.5 rounded-full border-gray-500 text-gray-600">
-          {aToken ? "Admin" : "Doctor"}
+        <p className="border px-2.5 py-0.5 rounded-lg border-gray-500 text-gray-600">
+          {aToken ? "Admin Panel" : "Doctor Panel"}
         </p>
       </div>
       <button
