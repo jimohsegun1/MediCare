@@ -32,7 +32,13 @@ const Navbar = () => {
           />
           <span className="font-bold text-primary text-xl">MediCare</span>
         </div>
-        <a href="https://medi-care-admin-kohl.vercel.app/" target="_blank" className="text-xs text-gray-400 hover:text-gray-600">Go to Admin Panel</a>
+        <a
+          href="https://medi-care-admin-kohl.vercel.app/"
+          target="_blank"
+          className="text-xs text-gray-400 hover:text-gray-600"
+        >
+          Go to Admin Panel
+        </a>
       </div>
 
       <ul className="hidden md:flex items-start gap-5 font-medium">
