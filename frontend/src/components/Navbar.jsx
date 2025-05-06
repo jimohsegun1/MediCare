@@ -34,13 +34,6 @@ const Navbar = () => {
             MediCare
           </span>
         </div>
-        <a
-          href="https://medi-care-admin-kohl.vercel.app/"
-          target="_blank"
-          className="text-xs text-gray-400 hover:text-gray-600"
-        >
-          Go to Admin Panel
-        </a>
       </div>
 
       <ul className="hidden md:flex items-start gap-5 font-medium">
@@ -148,7 +141,6 @@ const Navbar = () => {
                   setShowMenu(false);
                   navigate("/");
                 }}
-                
                 className="bg-primary text-white px-3 py-2 rounded-md font-extralight"
               >
                 Logout

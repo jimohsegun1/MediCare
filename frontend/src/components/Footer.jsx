@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { assets } from "../assets/assets";
 
 const Footer = () => {
@@ -7,7 +9,10 @@ const Footer = () => {
       <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
         <div>
           {/* <img className="mb-5 w-40" src={assets.logo} alt="" /> */}
-          <div className="flex items-center space-x-1 cursor-pointer" onClick={() => navigate("/")}>
+          <div
+            className="flex items-center space-x-1 cursor-pointer"
+            onClick={() => navigate("/")}
+          >
             <img
               className="w-[50px] h-[50px] "
               src={assets.logo}
@@ -28,10 +33,27 @@ const Footer = () => {
         <div>
           <p className="text-xl font-medium mb-5">COMPANY</p>
           <ul className="flex flex-col gap-2 text-gray-600">
-            <li> Home</li>
-            <li>About us</li>
-            <li>Contact us</li>
-            <li>Privacy policy</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About us</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact us</Link>
+            </li>
+            {/* <li>
+              <Link to="/privacy-policy">Admin</Link>
+            </li> */}
+            <li>
+              <a
+                href="https://medi-care-admin-kohl.vercel.app/"
+                target="_blank"
+                className="text-sm text-gray-400 hover:text-gray-600"
+              >
+                Admin Panel
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -46,7 +68,9 @@ const Footer = () => {
 
       <div>
         <hr />
-        <p className="py-5 text-sm text-center">Copyright © 2024 MediCare - All Right Reserved.</p>
+        <p className="py-5 text-sm text-center">
+          Copyright © 2024 MediCare - All Right Reserved.
+        </p>
       </div>
     </div>
   );
