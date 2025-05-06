@@ -24,13 +24,15 @@ const Navbar = () => {
           onClick={() => navigate("/")}
         >
           <img
-            className="w-[50px] h-[50px] "
+            className="w-[25px] h-[25px] "
             src={assets.logo}
             alt=""
             width={10}
             height={10}
           />
-          <span className="font-bold text-primary text-xl">MediCare</span>
+          <span className="font-bold text-primary text-sm md:text-xl">
+            MediCare
+          </span>
         </div>
         <a
           href="https://medi-care-admin-kohl.vercel.app/"
@@ -119,7 +121,7 @@ const Navbar = () => {
               onClick={() => navigate("/")}
             >
               <img
-                className="w-[50px] h-[50px] "
+                className="w-[30px] h-[30px] "
                 src={assets.logo}
                 alt=""
                 width={10}
@@ -127,6 +129,31 @@ const Navbar = () => {
               />
               <span className="font-bold text-primary text-xl">MediCare</span>
             </div>
+
+            {!token && !userData ? (
+              <button
+                onClick={() => {
+                  navigate("/login");
+                  setShowMenu(false);
+                }}
+                className="bg-primary text-white px-3 py-2 rounded-md font-extralight"
+              >
+                Create account
+              </button>
+            ) : (
+              <button
+                // onClick={logout}
+                onClick={() => {
+                  logout();
+                  setShowMenu(false);
+                  navigate("/");
+                }}
+                
+                className="bg-primary text-white px-3 py-2 rounded-md font-extralight"
+              >
+                Logout
+              </button>
+            )}
 
             <img
               className="w-7"
