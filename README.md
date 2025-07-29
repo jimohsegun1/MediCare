@@ -9,7 +9,7 @@ As part of my graduation at **SAIL Innovation Lab** for the completion of the **
 
 ## Key Features  
 1. **User Authentication**  
-   - Secure login and registration system using JWT for both patients and doctors.  
+   - Secure login and registration system using JWT for both patients and doctors and Admin.  
 
 2. **Appointment Scheduling**  
    - Patients can book appointments with doctors based on their availability.  
